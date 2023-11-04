@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventory Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inventory Management System</h1>
+
+    <form action="/add_item" method="get">
+        <div class="form-group">
+            <label for="name">Item Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" required>
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" id="price" name="price" step="0.01" required>
+        </div>
+        <button type="submit">Add Item</button>
+    </form>
+
+    <form action="/delete_item" method="get">
+        <div class="form-group">
+            <label for="deleteName">Item Name to Delete:</label>
+            <input type="text" id="deleteName" name="name" required>
+        </div>
+        <button type="submit">Delete Item</button>
+    </form>
+
+    <form action="/search_item" method="get">
+        <div class="form-group">
+            <label for="searchName">Item Name to Search:</label>
+            <input type="text" id="searchName" name="name" required>
+        </div>
+        <button type="submit">Search Item</button>
+    </form>
+
+    <!-- Other forms for additional functionalities can be added here -->
+
+</body>
+</html>
